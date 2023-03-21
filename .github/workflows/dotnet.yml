@@ -18,7 +18,7 @@ jobs:
       run: echo "Hello guys"
 
   build:
-    depends-on: welcome
+    needs: welcome
     runs-on: windows-latest
 
     steps:
