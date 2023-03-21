@@ -17,7 +17,8 @@ jobs:
     - name: Hello message
       run: echo "Hello guys"
 
-  BuildProject:
+  build:
+    depens-on: welcome
     runs-on: windows-latest
 
     steps:
