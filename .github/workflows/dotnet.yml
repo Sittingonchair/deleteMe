@@ -16,10 +16,6 @@ jobs:
     steps:
     - name: Hello message
       run: echo "Hello guys"
-    steps:
-    - task: UseDotNet@2
-      inputs:
-        version: '6.x'
   BuildProject:
     runs-on: windows-latest
 
