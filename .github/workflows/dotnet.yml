@@ -16,10 +16,15 @@ jobs:
     steps:
     - name: Hello message
       run: echo "Hello guys"
+
   BuildProject:
     runs-on: windows-latest
 
     steps:
+    - uses: actions/checkout@v3
+    - uses: action/setuo-dontet@v2
+      with:
+        dotnet-version: 6.x
     - task: DotNetCoreCLI@2
       displayName: Build
       inputs:
