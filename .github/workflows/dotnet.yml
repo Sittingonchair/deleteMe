@@ -20,7 +20,7 @@ jobs:
     - task: UseDotNet@2
       inputs:
         version: '6.x'
-  build:
+  BuildProject:
     runs-on: windows-latest
 
     steps:
