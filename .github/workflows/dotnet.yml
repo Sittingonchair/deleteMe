@@ -1,6 +1,13 @@
 name: .NET
 
-on: [pull_request]
+on: 
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - main
+      - 'releases/**'
 
 jobs:
   welcome:
@@ -9,3 +16,16 @@ jobs:
     steps:
     - name: Hello message
       run: echo "Hello guys"
+    steps:
+    - task: UseDotNet@2
+      inputs:
+        version: '6.x'
+  build:
+    run-on: windows-latest
+
+    steps:
+    - task: DotNetCoreCLI@2
+      displayName: Build
+      inputs:
+        command: build
+        projects: '**/*.csproj'
