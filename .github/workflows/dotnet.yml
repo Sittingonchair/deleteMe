@@ -21,7 +21,7 @@ jobs:
       inputs:
         version: '6.x'
   build:
-    run-on: windows-latest
+    runs-on: windows-latest
 
     steps:
     - task: DotNetCoreCLI@2
